@@ -114,6 +114,11 @@ prompt_dir() {
   prompt_segment blue black '%~'
 }
 
+# Date/time
+prompt_timestamp() {
+  prompt_segment black green '%D{%F}%t'
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -131,6 +136,7 @@ prompt_status() {
 ## Main prompt
 build_prompt() {
   RETVAL=$?
+  prompt_timestamp
   prompt_status
   prompt_context
   prompt_dir
