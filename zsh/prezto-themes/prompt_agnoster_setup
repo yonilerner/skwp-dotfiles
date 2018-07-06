@@ -116,7 +116,7 @@ prompt_dir() {
 
 # Date/time
 prompt_timestamp() {
-  prompt_segment black green '%D{%F}%t'
+  prompt_segment black green '%D{%F} %t'
 }
 
 # Status:
