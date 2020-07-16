@@ -37,6 +37,7 @@ DETACHED="\u27a6"
 CROSS="\u2718"
 LIGHTNING="\u26a1"
 GEAR="\u2699"
+PYTHON_SYMBOL="🐍"
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -158,6 +159,13 @@ ZSH_COMMAND_TIME_COLOR=cyan
 prompt_timestamp() {
   prompt_segment black green '%D{%F}%t '
 }
+# Yoni virtualenv
+prompt_virtualenv() {
+  local virtualenv_path="$VIRTUAL_ENV"
+  if [[ -n $virtualenv_path ]]; then
+    prompt_segment cyan black "$PYTHON_SYMBOL $(basename $virtualenv_path)"
+  fi
+}
 ## End Yoni mods ##
 
 ## Main prompt
@@ -166,6 +174,7 @@ prompt_agnoster_main() {
   CURRENT_BG='NONE'
   prompt_timestamp
   prompt_status
+	prompt_virtualenv
   prompt_context
   prompt_dir
   prompt_git

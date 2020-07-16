@@ -114,7 +114,7 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
-  pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [advice]
   statusHints = false
 [diff]
@@ -135,6 +135,8 @@
 [credential]
 	helper = store
 [commit]
-	gpgsign = true
+  #gpgsign = true
 [diff "sopsdiffer"]
 	textconv = sops -d
+[url "\"git@github.com:\""]
+	insteadOf = \"https://github.com/\"
