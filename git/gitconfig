@@ -129,9 +129,9 @@
 [include]
   path = .gitconfig.user
 [user]
-  email = yonilerner@gmail.com
+	email = yoni.lerner@discordapp.com
   name = Yoni Lerner
-	signingkey = 236F3C08B68DBCA44D56DB50D90AB4B87ECFE071
+	signingkey = DBDB162DD9E90BFE
 [credential]
 	helper = store
 [commit]
@@ -140,3 +140,5 @@
 	textconv = sops -d
 [url "\"git@github.com:\""]
 	insteadOf = \"https://github.com/\"
+[gpg]
+	program = gpg
